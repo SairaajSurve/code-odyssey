@@ -37,14 +37,14 @@ const addGuide = async (req, res) => {
         });
         mongoClient.close();
         if (status.acknowledged == true) {
-            res.status(200).json({ msg: "Guide added" })
+            return res.status(200).json({ msg: "Guide added" })
         }
         else {
-            res.status(500).json({ msg: "Something went wrong" })
+            return res.status(500).json({ msg: "Something went wrong" })
         }
     }
     catch (err) {
-        res.status(500).json({ msg: "Something went wrong" })
+        return res.status(500).json({ msg: "Something went wrong" })
     }
 }
 
@@ -54,15 +54,15 @@ const loginGuide = async (req, res) => {
     const result = await db.collection("guide").findOne({ email: req.query.email });
     mongoClient.close();
     if (result == undefined) {
-        res.status(401).json({ token: "login failed" })
+        return res.status(401).json({ token: "login failed" })
     }
     else {
         if (await bcrypt.compare(req.query.password, result.password)) {
             const token = jwt.sign({ email: result.email }, secret_token, { expiresIn: '1h' })
-            res.status(200).json({ token: token, fname: result.fname, lname: result.lname, email: result.email, description: result.description, rating: result.rating, contact: result.contact });
+            return res.status(200).json({ token: token, fname: result.fname, lname: result.lname, email: result.email, description: result.description, rating: result.rating, contact: result.contact });
         }
         else {
-            res.status(401).json({ msg: "login failed" })
+            return res.status(401).json({ msg: "login failed" })
         }
     }
 }
@@ -72,7 +72,7 @@ const updateGuide = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("guide").findOne({ email: req.body.email });
     if (result == undefined) {
-        res.status(404).json({ msg: "guide not found" })
+        return res.status(404).json({ msg: "guide not found" })
     }
     const encryptedPassword = await bcrypt.hash(req.body.password, 10);
     try {
@@ -89,13 +89,13 @@ const updateGuide = async (req, res) => {
         )
         mongoClient.close();
         if (status.acknowledged == true) {
-            res.status(200).json({ msg: "User updated" })
+            return res.status(200).json({ msg: "User updated" })
         }
         else {
-            res.status(500).json({ msg: "Something went wrong" })
+            return res.status(500).json({ msg: "Something went wrong" })
         }
     } catch (error) {
-        res.status(500).json({ msg: "Something went wrong" })
+        return res.status(500).json({ msg: "Something went wrong" })
     }
 }
 
@@ -105,9 +105,9 @@ const deleteGuide = async (req, res) => {
     const result = await db.collection("guide").deleteOne({ email: req.body.email });
     mongoClient.close();
     if (result.deletedCount == 0) {
-        res.status(500).json({ msg: "Guide not found" });
+        return res.status(500).json({ msg: "Guide not found" });
     } else {
-        res.status(204).json({ msg: "Guide Deleted" });
+        return res.status(204).json({ msg: "Guide Deleted" });
     }
 }
 
@@ -119,7 +119,7 @@ const addUser = async (req, res) => {
         const presentUsers = (await db.collection("user").countDocuments({ email: req.body.email }));
 
         if (presentUsers >= 1) {
-            res.status(409).json({ msg: "Email already exists" })
+            return res.status(409).json({ msg: "Email already exists" })
         }
         const _id = (await db.collection("user").countDocuments()) + 1;
         const encryptedPassword = await bcrypt.hash(req.body.password, 10);
@@ -132,14 +132,14 @@ const addUser = async (req, res) => {
         });
         mongoClient.close();
         if (status.acknowledged == true) {
-            res.status(200).json({ msg: "User added" })
+            return res.status(200).json({ msg: "User added" })
         }
         else {
-            res.status(500).json({ msg: "Something went wrong" })
+            return res.status(500).json({ msg: "Something went wrong" })
         }
     }
     catch (err) {
-        res.status(500).json({ msg: "Something went wrong" })
+        return res.status(500).json({ msg: "Something went wrong" })
     }
 }
 
@@ -154,10 +154,10 @@ const loginUser = async (req, res) => {
     else {
         if (await bcrypt.compare(req.query.password, result.password)) {
             const token = jwt.sign({ email: result.email }, secret_token, { expiresIn: '1h' })
-            res.status(200).json({ token: token, fname: result.fname, lname: result.lname, email: result.email })
+            return res.status(200).json({ token: token, fname: result.fname, lname: result.lname, email: result.email })
         }
         else {
-            res.status(401).json({ msg: "login failed" })
+            return res.status(401).json({ msg: "login failed" })
         }
     }
 }
@@ -167,7 +167,7 @@ const updateUser = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("user").findOne({ email: req.body.email });
     if (result == undefined) {
-        res.status(404).json({ msg: "user not found" })
+        return res.status(404).json({ msg: "user not found" })
     }
     const encryptedPassword = await bcrypt.hash(req.body.password, 10);
     try {
@@ -182,13 +182,13 @@ const updateUser = async (req, res) => {
         )
         mongoClient.close();
         if (status.acknowledged == true) {
-            res.status(200).json({ msg: "User updated" })
+            return res.status(200).json({ msg: "User updated" })
         }
         else {
-            res.status(500).json({ msg: "Something went wrong" })
+            return res.status(500).json({ msg: "Something went wrong" })
         }
     } catch (error) {
-        res.status(500).json({ msg: "Something went wrong" })
+        return res.status(500).json({ msg: "Something went wrong" })
     }
 }
 
@@ -198,9 +198,9 @@ const deleteUser = async (req, res) => {
     const result = await db.collection("user").deleteOne({ email: req.body.email });
     mongoClient.close();
     if (result.deletedCount == 0) {
-        res.status(500).json({ msg: "User not found" });
+        return res.status(500).json({ msg: "User not found" });
     } else {
-        res.status(204).json({ msg: "User Deleted" });
+        return res.status(204).json({ msg: "User Deleted" });
     }
 }
 
@@ -209,7 +209,7 @@ const getCity = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("city").find({}).toArray();
     mongoClient.close();
-    res.status(200).json({ result })
+    return res.status(200).json({ result })
 }
 const getGuide = async (req, res) => {
     await mongoClient.connect()
@@ -224,9 +224,9 @@ const getGuide = async (req, res) => {
             description: result.description,
             rating: result.rating
         }
-        res.status(200).json({ result })
+        return status(200).json({ result })
     } else {
-        res.status(401).json({ msg: "Guide not found" })
+        return res.status(401).json({ msg: "Guide not found" })
     }
 }
 
