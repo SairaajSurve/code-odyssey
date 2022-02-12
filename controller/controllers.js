@@ -19,7 +19,7 @@ const addGuide = async (req, res) => {
         const presentUsers = (await db.collection("guide").countDocuments({ email: req.body.email }));
 
         if (presentUsers >= 1) {
-            res.status(409).json({ msg: "Email already exists" })
+            return res.status(409).json({ msg: "Email already exists" })
         }
 
         const _id = (await db.collection("guide").countDocuments()) + 1;
@@ -53,13 +53,13 @@ const loginGuide = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("guide").findOne({ email: req.query.email });
     mongoClient.close();
-    if(result == undefined){
-        res.status(401).json({ msg: "login failed" })
+    if (result == undefined) {
+        res.status(401).json({ token: "login failed" })
     }
-    else{
+    else {
         if (await bcrypt.compare(req.query.password, result.password)) {
-            const token = jwt.sign({email : result.email},secret_token,{expiresIn : '1h'})
-            res.status(200).json({ token : token })
+            const token = jwt.sign({ email: result.email }, secret_token, { expiresIn: '1h' })
+            res.status(200).json({ token: token, fname: result.fname, lname: result.lname, email: result.email, description: result.description, rating: result.rating, contact: result.contact });
         }
         else {
             res.status(401).json({ msg: "login failed" })
@@ -99,14 +99,14 @@ const updateGuide = async (req, res) => {
     }
 }
 
-const deleteGuide = async (req,res)=>{
+const deleteGuide = async (req, res) => {
     await mongoClient.connect()
     const db = mongoClient.db("RADS");
     const result = await db.collection("guide").deleteOne({ email: req.body.email });
     mongoClient.close();
-    if(result.deletedCount == 0 ){
+    if (result.deletedCount == 0) {
         res.status(500).json({ msg: "Guide not found" });
-    }else{
+    } else {
         res.status(204).json({ msg: "Guide Deleted" });
     }
 }
@@ -148,15 +148,17 @@ const loginUser = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("user").findOne({ email: req.query.email });
     mongoClient.close();
-    if(result){
-        res.status(401).json({ msg: "login failed" })
-    }
-    if (await bcrypt.compare(req.query.password, result.password)) {
-        const token = jwt.sign({email : result.email},secret_token,{expiresIn : '1h'})
-        res.status(200).json({ token : token })
+    if (result == null) {
+        return res.status(401).json({ msg: "login failed" })
     }
     else {
-        res.status(401).json({ msg: "login failed" })
+        if (await bcrypt.compare(req.query.password, result.password)) {
+            const token = jwt.sign({ email: result.email }, secret_token, { expiresIn: '1h' })
+            res.status(200).json({ token: token, fname: result.fname, lname: result.lname, email: result.email })
+        }
+        else {
+            res.status(401).json({ msg: "login failed" })
+        }
     }
 }
 
@@ -190,14 +192,14 @@ const updateUser = async (req, res) => {
     }
 }
 
-const deleteUser = async (req,res)=>{
+const deleteUser = async (req, res) => {
     await mongoClient.connect()
     const db = mongoClient.db("RADS");
     const result = await db.collection("user").deleteOne({ email: req.body.email });
     mongoClient.close();
-    if(result.deletedCount == 0 ){
+    if (result.deletedCount == 0) {
         res.status(500).json({ msg: "User not found" });
-    }else{
+    } else {
         res.status(204).json({ msg: "User Deleted" });
     }
 }

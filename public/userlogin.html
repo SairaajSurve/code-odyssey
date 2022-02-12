@@ -45,8 +45,8 @@
                     <p>User Login</p>
                 </div>
                 <div class="mb-6">
-                  <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your username*</label>
-                  <input type="text" id="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required>
+                  <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email*</label>
+                  <input type="text" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required>
                 </div>
                 <div class="mb-6">
                   <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your password*</label>
@@ -65,11 +65,12 @@
                   </div>
                   <br>
                 <!-- </div> -->
-                <button type="submit" class="text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Login to account</button> 
+                <button type="button" class="text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800" id = "login-button">Login to account</button> 
             </form>
         </div>
     </main>
     
 </body>
-
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/js/userlogin.js"></script>
 </html>
