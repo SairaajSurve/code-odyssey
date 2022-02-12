@@ -1,6 +1,11 @@
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+  content: ["public/*"],
+  theme: {
+    extend: {
+      fontFamily: {
+        'body': ['Lato', 'sans-serif'],
+      }
+    },
+    plugins: [],
+  }
 }
