@@ -3,16 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "postcss.config.js",
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.22",
     "vite": "^2.8.1"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "vite"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SairaajSurve/code-odyssey.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SairaajSurve/code-odyssey/issues"
+  },
+  "homepage": "https://github.com/SairaajSurve/code-odyssey#readme"
 }
