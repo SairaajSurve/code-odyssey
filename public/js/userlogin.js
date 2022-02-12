@@ -1,4 +1,3 @@
-console.log("hi");
 document.querySelector("#login-button").addEventListener('click', async () => {
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value
@@ -8,10 +7,6 @@ document.querySelector("#login-button").addEventListener('click', async () => {
         url: `http://localhost:3001/login/user/?email=${email}&password=${password}`,
         validateStatus: () => true,
     })
-
-    console.log(email);
-    console.log(password);
-    console.log(res);
 
     if(res.status == 200){
         sessionStorage.setItem('token', res.data.token);
