@@ -5,82 +5,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com/?plugins=forms,typography,aspect-ratio,line-clamp%22%3E"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
     <title>Hackathon</title>
 </head>
 
-<body class="font-body">
-    <nav class="bg-teal-600 flex justify-between content-around text-slate-100 mx-auto px-14 py-5">
-        <div class="text-3xl font-bold"> RADS </div>
-        <div class="text-xl px-10">
-            <ul class="flex content-center list-none items-center space-x-10">
-                <li><a href="index.html">Home<a></li>
-                <li><a href="main.html">Places to Visit</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><button>Login</button> / <button>Sign up</button></li>
+<body  class="font-body">
+    <nav style="@media (max-width:500px){background-color: blue;}"
+        class="bg-teal-600 hover:bg-slate-100 hover:text-black md:flex justify-between content-around text-slate-100 px-7 py-2 md:px-14 md:py-5">
+        <div class="text-xl md:text-3xl font-bold"> RADS </div>
+        <div class="text-md md:text-xl md:px-10">
+            <ul class="md:flex list-none gap-8">
+                <li class=""><a href="#">Home</a></li>
+                <li class=""><a href="main.html">Places to Visit</a></li>
+                <li class=""><a href="news.html">News</a></li>
+                <li class=""><button><a href="guidelogin.html">Login</a></button> / <button><a href="guidesignup.html">Sign up</a></button></li>
                 <!-- <li><button>Sign up</button></li> -->
             </ul>
         </div>
+
+        <!-- <div class="flex text-xl justify-end">
+            <ul>
+                <li></li>
+            </ul>
+            <p><button>Login</button> / <button>Sign up</button></p>
+        </div> -->
     </nav>
-    <main>
-        <section>
-            <div class="bg-zinc-800">
-                <div class="container gap-10 mx-auto py-20 grid grid-cols-3">
-                    <a href="uttarakhand.html" target="_blank">
-                        <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
-                            <div>
-                                <img class="w-100 h-60 rounded-t-lg" src="images/munsiyari.jpeg" />
-                            </div>
-                            <h3 class="text-xl py-3 tracking-tight text-slate-100">
-                                MUNSIYARI, UTTARAKHAND</h3>
-                            <div>
-                                <div class="flex items-center mt-2 mb-5">
-                                    <span
-                                        class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                </div>
+    <main class="bg-zinc-800">
+        <div>
+            <div class="container gap-5 py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10">
+                <!-- 1st grid element -->
+                    
+                    <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
+                        <a href="uttarakhand.html" target="_blank">
+                        <div>
+                            <img class="w-100 h-60 rounded-t-lg" src="images/munsiyari.jpeg" />
+                        </div>
+                        <h3 class="text-xl py-3 tracking-tight text-slate-100">
+                            MUNSIYARI, UTTARAKHAND</h3>
+                        <div>
+                            <div class="flex items-center pt-2 pb-5">
+                                <span
+                                    class="bg-slate-50 text-emerald-800 text-s font-semibold pr-1 px-2 rounded pl-1">5.0</span>
+                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
+                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                    </path>
+                                </svg>
                             </div>
                         </div>
                     </a>
-
-                    <a href="gujarat.html" target="_blank">
+                    </div>
+                
+                    <!-- 2nd -->
+                    
                         <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
+                            <a href="gujurat.html" target="_blank">
                             <div>
                                 <img class="w-100 h-60 rounded-t-lg" src="images/kutch.jpeg" />
                             </div>
@@ -122,198 +133,205 @@
                                     </svg>
                                 </div>
                             </div>
-                        </div>
                     </a>
+                        </div>
 
-                    <a href="chattisgarh.html" target="_blank">
-                        <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
-                            <div>
-                                <img class="w-100 h-60 rounded-t-lg" src="images/chitrakote.jpeg" />
-                            </div>
-                            <h3 class="text-xl py-3 tracking-tight text-slate-100">
-                                CHITRAKOTE, CHHATISGARH</h3>
-                            <div>
-                                <div class="flex items-center mt-2 mb-5">
-                                    <span
-                                        class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
+                        <!-- 3rd -->
+                        
+                            <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
+                                <a href="chattisgarh.html" target="_blank">
+                                <div>
+                                    <img class="w-100 h-60 rounded-t-lg" src="images/chitrakote.jpeg" />
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="sikkim.html" target="_blank">
-                        <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
-                            <div>
-                                <img class="w-100 h-60 rounded-t-lg" src="images/lachung-lachen.jpeg" />
-                            </div>
-                            <h3 class="text-xl py-3 tracking-tight text-slate-100">
-                                LACHUNG AND LACHEN, SIKKIM</h3>
-                            <div>
-                                <div class="flex items-center mt-2 mb-5">
-                                    <span
-                                        class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
+                                <h3 class="text-xl py-3 tracking-tight text-slate-100">
+                                    CHITRAKOTE, CHHATISGARH</h3>
+                                <div>
+                                    <div class="flex items-center mt-2 mb-5">
+                                        <span
+                                            class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
+                                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                 </div>
+                            </a>
                             </div>
-                        </div>
-                    </a>
 
-                    <a href="rajasthan.html" target="_blank">
-                        <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
-                            <div>
-                                <img class="w-100 h-60 rounded-t-lg" src="images/bishnoi.jpeg" />
-                            </div>
-                            <h3 class="text-xl py-3 tracking-tight text-slate-100">
-                                BISHNOI VILLAGES, RAJASTHAN</h3>
-                            <div>
-                                <div class="flex items-center mt-2 mb-5">
-                                    <span
-                                        class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
+                            <!-- 4th -->
+                            
+                                <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
+                                    <a href="sikkim.html" target="_blank">
+                                    <div>
+                                        <img class="w-100 h-60 rounded-t-lg" src="images/lachung-lachen.jpeg" />
+                                    </div>
+                                    <h3 class="text-xl py-3 tracking-tight text-slate-100">
+                                        LACHUNG AND LACHEN, SIKKIM</h3>
+                                    <div>
+                                        <div class="flex items-center mt-2 mb-5">
+                                            <span
+                                                class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
+                                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </a>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
+                            
+                                <!-- 5th -->
+                                    <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
+                                        <a href="rajasthan.html" target="_blank">
+                                        <div>
+                                            <img class="w-100 h-60 rounded-t-lg" src="images/bishnoi.jpeg" />
+                                        </div>
+                                        <h3 class="text-xl py-3 tracking-tight text-slate-100">
+                                            BISHNOI VILLAGES, RAJASTHAN</h3>
+                                        <div>
+                                            <div class="flex items-center mt-2 mb-5">
+                                                <span
+                                                    class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                    </path>
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                    </path>
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                    </path>
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                    </path>
+                                                </svg>
+                                                <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </div>
+                                
+                                    <!-- 6th -->
+                                        <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
+                                            <a href="maharashtra.html" target="_blank">
+                                            <div>
+                                                <img class="w-100 h-60 rounded-t-lg" src="images/mb.jpeg" />
+                                            </div>
+                                            <h3 class="text-xl py-3 tracking-tight text-slate-100">
+                                                MAHABALESHWAR, MAHARASHTRA</h3>
+                                            <div>
+                                                <div class="flex items-center mt-2 mb-5">
+                                                    <span
+                                                        class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
+                                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                                        </path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+                                    
 
-                    <a href="maharashtra.html" target="_blank">
-                        <div class="card flex flex-col items-center bg-zinc-700 rounded-xl shadow-2xl max-w-sm">
-                            <div>
-                                <img class="w-100 h-60 rounded-t-lg" src="images/mb.jpeg" />
-                            </div>
-                            <h3 class="text-xl py-3 tracking-tight text-slate-100">
-                                MAHABALESHWAR, MAHARASHTRA</h3>
-                            <div>
-                                <div class="flex items-center mt-2 mb-5">
-                                    <span
-                                        class="bg-slate-50 text-emerald-800 text-s font-semibold mr-1 px-2 rounded ml-1">5.0</span>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 17 17"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                        </path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
 
-
-                </div>
             </div>
-        </section>
+        </div>
     </main>
+    
 </body>
 
 </html>

@@ -16,18 +16,13 @@
     <title>Hackathon</title>
 </head>
 
-<body class="font-body">
-    <nav
-        class="bg-teal-600 hover:bg-slate-100 hover:text-black flex justify-between content-around text-slate-100  px-14 py-5">
-        <div class="text-3xl font-bold"> RADS </div>
-        <div class="text-xl px-10">
-<<<<<<< Updated upstream
-            <ul class="flex justify-end space-x-10">
-                <li class=""><a class="" href="#">Home<a></li>
-=======
-            <ul class="flex list-none gap-8">
+<body  class="font-body">
+    <nav style="@media (max-width:500px){background-color: blue;}"
+        class="bg-teal-600 hover:bg-slate-100 hover:text-black md:flex justify-between content-around text-slate-100 px-7 py-2 md:px-14 md:py-5">
+        <div class="text-xl md:text-3xl font-bold"> RADS </div>
+        <div class="text-md md:text-xl md:px-10">
+            <ul class="md:flex list-none gap-8">
                 <li class=""><a href="#">Home</a></li>
->>>>>>> Stashed changes
                 <li class=""><a href="main.html">Places to Visit</a></li>
                 <li class=""><a href="news.html">News</a></li>
                 <li class=""><button><a href="guidelogin.html">Login</a></button> / <button><a href="guidesignup.html">Sign up</a></button></li>
@@ -44,63 +39,58 @@
     </nav>
     <!-- <div style="background-color:white; height: 0.07em; width: 8rem;"></div> -->
 
-    <main class="bg-teal-600 text-slate-100 p-10">
-        <div class="flex gap-5 pb-0">
-            <div class="w-7/12">
-                <p class="text-3xl font-bold py-10">OUR VISION</p>
-                <p class="text-xl ">Promoting rural tourism and local handicrafts in rural areas are ways to
+    <main class="bg-teal-600 text-slate-100 p-5 md:p-10">
+        <div class="md:flex gap-5 pb-0">
+            <div>
+                <img class="h-auto w-auto md:hidden " src="images/hp.png" alt="">
+            </div>
+            <div class="md:w-7/12">
+                <p class="text-lg md:text-3xl font-bold py-3 md:py-10">OUR VISION</p>
+                <p class="text-md md:text-xl ">Promoting rural tourism and local handicrafts in rural areas are ways to
                     lead
                     India
                     to the path to 'Atmanirbhar Bharat' and make our country self-reliant.</p>
                 <br>
-<<<<<<< Updated upstream
-                <p class="text-xl ">Promoting rural tourism and local handicrafts in rural areas are ways to lead India to the path to 'Atmanirbhar Bharat' and make our country self-reliant.</p>
-                <p class="text-xl">Our website displays the must-visit rural places of India and you will be assigned a local guide. Local residents of these tourist places can register and be a part of the community, hence bringing more employment opportunities to local Indians. </p>
-                <p class="text-xl ">You will get to learn about the history of these places and get an opportunity to view rural art and handicrafts that are prominently highlighted on the website.</p>
-=======
-                <p class="text-xl    ">Our website displays the must-visit rural places of India and you will be
+                <p class="text-md md:text-xl">Our website displays the must-visit rural places of India and you will be
                     assigned a local guide. Local residents of these tourist places can register and be a part
                     of
                     the
                     community, hence bringing more employment opportunities to local Indians. </p>
                 <br>
-                <p class="text-xl ">You will get to learn about the history of these places and get an
+                <p class="text-md md:text-xl ">You will get to learn about the history of these places and get an
                     opportunity
                     to
                     view rural art and handicrafts that are prominently highlighted on the website.</p>
->>>>>>> Stashed changes
             </div>
             <div>
-                <img class="h-auto w-auto" src="images/hp.png" alt="">
+                <img class="h-auto w-auto hidden md:block " src="images/hp.png" alt="">
             </div>
         </div>
         <br>
         <div class="justify-center">
-            <button
-                class="flex hover:bg-slate-100 hover:text-black bg-zinc-800 rounded-full w-auto h-14 px-5 items-center text-lg font-semibold">
-                Register to Experience
-                <svg class=" flex ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
+            <a href="userlogin.html">
+                <button class="flex hover:bg-slate-200 hover:text-black bg-zinc-800 rounded-full w-auto h-14 pl-5 pr-5 items-center text-lg font-semibold">
+                    
+                        Register to Experience 
+                        <svg class=" ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    
+                </button>
+            </a>
         </div>
     </main>
 
     <!-- <br> -->
-    <footer class="bg-zinc-800 text-zinc-300 text-sm px-20 py-10">
-        <div class="flex justify-between">
+    <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
+        <div class="flex justify-between content-between">
             <div>
-                <p class="font-bold">CONTACT US</p>
-                <p>9999999999</p>
-                <p>abcd@gmail.com</p>
+                <p class="my-2 sm:font-bold">CONTACT US</p>
+                <p  class="my-2">9999999999</p>
+                <p  class="my-2">abcd@gmail.com</p>
             </div>
             <div>
-                <p>Code Odyssey</p>
-                <p>Copyright &copy; 2022</p>
-                <p>By RADS</p>
+                <p class="my-2">Code Odyssey</p>
+                <p class="my-2">Copyright &copy; 2022</p>
+                <p class="my-2">By RADS</p>
             </div>
             <div class="flex flex-row gap-4">
                 <!-- <i class="fa-brands fa-instagram">Instagram</i> -->
