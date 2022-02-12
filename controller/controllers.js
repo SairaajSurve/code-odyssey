@@ -53,12 +53,17 @@ const loginGuide = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("guide").findOne({ email: req.query.email });
     mongoClient.close();
-    if (await bcrypt.compare(req.query.password, result.password)) {
-        const token = jwt.sign({email : result.email},secret_token,{expiresIn : '1h'})
-        res.status(200).json({ token : token })
-    }
-    else {
+    if(result == undefined){
         res.status(401).json({ msg: "login failed" })
+    }
+    else{
+        if (await bcrypt.compare(req.query.password, result.password)) {
+            const token = jwt.sign({email : result.email},secret_token,{expiresIn : '1h'})
+            res.status(200).json({ token : token })
+        }
+        else {
+            res.status(401).json({ msg: "login failed" })
+        }
     }
 }
 
@@ -143,6 +148,9 @@ const loginUser = async (req, res) => {
     const db = mongoClient.db("RADS");
     const result = await db.collection("user").findOne({ email: req.query.email });
     mongoClient.close();
+    if(result){
+        res.status(401).json({ msg: "login failed" })
+    }
     if (await bcrypt.compare(req.query.password, result.password)) {
         const token = jwt.sign({email : result.email},secret_token,{expiresIn : '1h'})
         res.status(200).json({ token : token })

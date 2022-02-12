@@ -5,8 +5,8 @@ const app = express();
 
 const {router} = require('./route/route')
 
-app.listen(3000,()=>{
-    console.log("Connected at "+3000);
+app.listen(3001,()=>{
+    console.log("Connected at "+3001);
 });
 
 app.use(express.static('./public'));
