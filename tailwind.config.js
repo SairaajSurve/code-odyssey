@@ -1,9 +1,11 @@
 module.exports = {
   content: ["public/*"],
   theme: {
-    extend: {},
-  }, fontFamily: {
-    'body': ['Lora', 'serif']
-  },
-  plugins: [],
+    extend: {
+      fontFamily: {
+        'body': ['Lato', 'sans-serif'],
+      }
+    },
+    plugins: [],
+  }
 }
