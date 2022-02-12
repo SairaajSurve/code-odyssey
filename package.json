@@ -10,7 +10,7 @@
     "vite": "^2.8.1"
   },
   "scripts": {
-    "start": "vite"
+    "build": "tailwindcss -i src/styles.css -o public/output.css -w"
   },
   "author": "",
   "license": "ISC",
