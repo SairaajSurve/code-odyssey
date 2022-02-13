@@ -52,23 +52,25 @@
 </head>
 
 <body class="font-body">
-    <nav class="bg-teal-600 flex justify-between content-around text-slate-100 mx-auto px-14 py-5">
-        <div class="text-3xl font-bold"> RADS </div>
-        <div class="text-xl px-10">
-            <ul class="flex content-center list-none items-center space-x-10">
-                <li><a href="index.html">Home<a></li>
-                <li><a href="main.html">Places to Visit</a></li>
-                <li><button>Login</button> / <button>Sign up</button></li>
-                <!-- <li><button>Sign up</button></li> -->
-            </ul>
-        </div>
-    </nav>
-    <main class="mx-auto bg-zinc-800 px-14 py-5">
+    <nav style="@media (max-width:500px){background-color: blue;}"
+    class="bg-teal-600 hover:bg-slate-100 ease-in-out duration-700 hover:text-black md:flex justify-between content-around text-slate-100 px-7 py-2 md:px-14 md:py-5">
+    <div class="text-xl md:text-3xl font-bold"> RADS </div>
+    <div class="text-md md:text-xl md:px-10">
+        <ul class="md:flex list-none gap-8">
+            <li class=""><a href="#">Home</a></li>
+            <li class=""><a href="main.html">Places to Visit</a></li>
+            <li class=""><button><a href="guidelogin.html">Login</a></button> / <button><a
+                        href="guidesignup.html">Sign up</a></button></li>
+            <!-- <li><button>Sign up</button></li> -->
+        </ul>
+    </div>
+</nav>
+    <main class="mx-auto bg-zinc-800 px-5 sm:px-14 py-5">
         <p
-            class="text-5xl flex justify-center py-10 pb-15 decoration-slate-100 underline underline-offset-8 text-slate-100">
+            class="text-xl sm:text-5xl flex justify-center py-10 pb-15 decoration-slate-100 underline underline-offset-8 text-slate-100">
             MAHABALESHWAR, MAHARASHTRA</p>
         <div class="float-right">
-            <div class="bg-white leading-normal tracking-normal m-2 w-auto ml-20 mr-5">
+            <div class="bg-white leading-normal tracking-normal m-0.5 sm:m-2 w-auto sm:ml-20 sm:mr-5">
                 <div class="carousel relative shadow-2xl bg-black">
                     <div class="carousel-inner relative overflow-hidden bg-slate-800 flex justify-center">
                         <!--Slide 1-->
@@ -168,9 +170,9 @@
         <br>
     </main>
     <main class="bg-gray-400 pb-15">
-        <p class="text-4xl flex justify-center py-10 text-zinc-800">
+        <p class="text-2xl sm:text-4xl flex justify-center py-10 text-zinc-800">
             LOCAL HANDICRAFTS</p>
-        <div class="flex justify-between mb-4 mx-20 pt-0 pb-10 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between mb-4 mx-20 pt-0 pb-10 gap-10">
             <div class="max-w-sm bg-white rounded-xl shadow-2xl w-fit">
                 <img class="rounded-lg h-full" src="images/view-uttarakhand-handicrafts-1.png" alt="" />
             </div>
