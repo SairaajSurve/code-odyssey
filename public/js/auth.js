@@ -1,5 +1,5 @@
 window.onload = async function(){
-    const token = localStorage.getItem('token');
+    const token = await localStorage.getItem('token');
     if(token != undefined){
         const ul = document.querySelector("#nav-list");
         const fname = localStorage.getItem('fname');
@@ -9,7 +9,6 @@ window.onload = async function(){
         newli.innerHTML = `<button id= "logout">Log out</button>`
         ul.appendChild(newli);
         document.querySelector('#logout').addEventListener('click',()=>{
-            console.log("clicked");
             localStorage.clear();
             window.alert("Logged out");
             window.location.reload();

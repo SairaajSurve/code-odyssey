@@ -17,7 +17,7 @@ document.querySelector("#login-button").addEventListener('click', async () => {
         localStorage.setItem('description', res.data.description);
         localStorage.setItem('contact', res.data.contact);
         window.alert("Login Succesful");
-        window.location.href = "http://localhost:3001/"
+        window.location.href = "http://localhost:3001/guide.html"
     }else{
         localStorage.clear();
         window.alert("Login Failed");
