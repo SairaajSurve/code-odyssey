@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com/?plugins=forms,typography,aspect-ratio,line-clamp%22%3E%22%3E"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
     <title>Hackathon</title>
     <style>
@@ -54,16 +57,27 @@
 </head>
 
 <body class="font-body">
-    <nav class="bg-teal-600 flex justify-between content-around text-slate-100 mx-auto px-14 py-5">
-        <div class="text-3xl font-bold"> RADS </div>
-        <div class="text-xl px-10">
-            <ul class="flex content-center list-none items-center space-x-10">
-                <li><a href="index.html">Home<a></li>
-                <li><a href="main.html">Places to Visit</a></li>
-                <li><button>Login</button> / <button>Sign up</button></li>
+    <nav
+        class="bg-teal-600 ease-in-out duration-700 md:flex justify-between content-around text-slate-100 px-7 py-5 md:px-14 md:py-5 hover:bg-white hover:text-black">
+        <div class="text-xl md:text-3xl font-bold"> RADS </div>
+        <div class="text-md md:text-xl md:px-10">
+            <ul class="md:flex list-none gap-8" id="nav-list">
+                <li class="hover:underline underline-offset-8"><a href="index.html">Home</a></li>
+                <li class="hover:underline underline-offset-8"><a href="main.html">Places to Visit</a></li>
+                <li class=""><button><a href="guidelogin.html"
+                            class="hover:underline underline-offset-8">Login</a></button> /
+                    <button><a href="guidesignup.html" class="hover:underline underline-offset-8">Sign up</a></button>
+                </li>
                 <!-- <li><button>Sign up</button></li> -->
             </ul>
         </div>
+
+        <!-- <div class="flex text-xl justify-end">
+      <ul>
+          <li></li>
+      </ul>
+      <p><button>Login</button> / <button>Sign up</button></p>
+  </div> -->
     </nav>
 
     <main class="mx-auto bg-zinc-800 px-14 py-5">
@@ -172,10 +186,10 @@
             </div>
         </div>
         <div class="text-xl text-slate-100 pb-20">
-            <p class="mt-8 mx-5">Sikkim has an abundance of beauty with its crystal clear lakes 
+            <p class="mt-8 mx-5">Sikkim has an abundance of beauty with its crystal clear lakes
                 surrounded by flowery paddocks.</p>
             <br>
-            <p class="mb-8 mx-5">Lachung and Lachen famous for its alpine lakes and flora make 
+            <p class="mb-8 mx-5">Lachung and Lachen famous for its alpine lakes and flora make
                 for a place where you may want to bask for hours.</p>
         </div>
         <br>
@@ -184,7 +198,7 @@
         <br>
         <br>
     </main>
-    
+
     <main class="bg-gray-400 pb-15 justify-center">
         <p class="text-4xl flex justify-center py-10 text-zinc-800">
             LOCAL HANDICRAFTS</p>
@@ -201,9 +215,22 @@
         </div>
         <p class="text-xl text-zinc-800 mx-5 flex justify-center pb-10">The main handicrafts of the district are
             embroidery of ethnic style, patchwork, terracotta, pen knives and nut crackers.</p>
+        <a href="guide.html" class="flex justify-center">
+            <button
+                class="flex bg-zinc-800 text-slate-100 rounded-full w-auto h-14 p-5 mb-10 items-center text-lg font-semibold hover:bg-white hover:text-black">
+
+                Experience
+                <svg class="ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+
+            </button>
+        </a>
     </main>
 
-    <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
+    <footer class="bg-slate-300 text-gray-400 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
         <div class="flex justify-between content-between">
             <div>
                 <p class="my-2 sm:font-bold">CONTACT US</p>

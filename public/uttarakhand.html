@@ -52,16 +52,27 @@
 </head>
 
 <body class="font-body">
-    <nav class="bg-teal-600 flex justify-between content-around text-slate-100 mx-auto px-14 py-5">
-        <div class="text-3xl font-bold"> RADS </div>
-        <div class="text-xl px-10">
-            <ul class="flex content-center list-none items-center space-x-10">
-                <li><a href="index.html">Home<a></li>
-                <li><a href="main.html">Places to Visit</a></li>
-                <li><button>Login</button> / <button>Sign up</button></li>
+    <nav
+        class="bg-teal-600 ease-in-out duration-700 md:flex justify-between content-around text-slate-100 px-7 py-5 md:px-14 md:py-5 hover:bg-white hover:text-black">
+        <div class="text-xl md:text-3xl font-bold"> RADS </div>
+        <div class="text-md md:text-xl md:px-10">
+            <ul class="md:flex list-none gap-8" id="nav-list">
+                <li class="hover:underline underline-offset-8"><a href="index.html">Home</a></li>
+                <li class="hover:underline underline-offset-8"><a href="main.html">Places to Visit</a></li>
+                <li class=""><button><a href="guidelogin.html"
+                            class="hover:underline underline-offset-8">Login</a></button> /
+                    <button><a href="guidesignup.html" class="hover:underline underline-offset-8">Sign up</a></button>
+                </li>
                 <!-- <li><button>Sign up</button></li> -->
             </ul>
         </div>
+
+        <!-- <div class="flex text-xl justify-end">
+      <ul>
+          <li></li>
+      </ul>
+      <p><button>Login</button> / <button>Sign up</button></p>
+  </div> -->
     </nav>
     <main class="mx-auto bg-zinc-800 px-14 py-5">
         <p
@@ -154,10 +165,12 @@
             </div>
         </div>
         <div class="text-xl text-slate-100 pb-20">
-            <p class="mt-8 mx-5">A mystical land of mountains and mythologies, exquisite landscapes and exhilarating adventure, 
+            <p class="mt-8 mx-5">A mystical land of mountains and mythologies, exquisite landscapes and exhilarating
+                adventure,
                 and wellness and yoga, Uttarakhand has something to offer every traveler.</p>
             <br>
-            <p class="mb-8 mx-5">Panchachuli is a group of five peaks and is the star attraction at Munsiyari as they look like 
+            <p class="mb-8 mx-5">Panchachuli is a group of five peaks and is the star attraction at Munsiyari as they
+                look like
                 chimneys and are amongst the gorgeous treasure trove among the magnificent peaks of </p>
         </div>
         <br>
@@ -185,6 +198,19 @@
             make
             their livelihood by weaving and they come to Munisiyari to sell their products. Tourists can purchase all
             kinds of handicrafts and wollen items such as shawls, caps, carpets and more.</p>
+        <a href="guide.html" class="flex justify-center">
+            <button
+                class="flex bg-zinc-800 text-slate-100 rounded-full w-auto h-14 p-5 mb-10 items-center text-lg font-semibold hover:bg-white hover:text-black">
+
+                Experience
+                <svg class="ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"></path>
+                </svg>
+
+            </button>
+        </a>
     </main>
 
     <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
