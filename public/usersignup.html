@@ -18,7 +18,7 @@
 
 <body class="font-body">
     <nav style="@media (max-width:500px){background-color: blue;}"
-        class="bg-teal-600 hover:bg-slate-100 hover:text-black md:flex justify-between content-around text-slate-100 px-7 py-2 md:px-14 md:py-5">
+        class="bg-teal-600 hover:bg-slate-100 ease-in-out duration-700 hover:text-black md:flex justify-between content-around text-slate-100 px-7 py-2 md:px-14 md:py-5">
         <div class="text-xl md:text-3xl font-bold"> RADS </div>
         <div class="text-md md:text-xl md:px-10">
             <ul class="md:flex list-none gap-8">
@@ -39,10 +39,10 @@
     </nav>
     <!-- <div style="background-color:white; height: 0.07em; width: 8rem;"></div> -->
 
-    <main class="">
-        <div class="flex justify-center">
+    <main class="bg-slate-100 dark:bg-zinc-800">
+        <div class="flex justify-center pt-5">
             <form class=" mt-[2vw] sm:w-1/3">
-                <div class="flex justify-center text-3xl font-bold mb-6">
+                <div class="flex justify-center text-3xl font-bold mb-6 dark:text-gray-100">
                     <p>User Sign up</p>
                 </div>
                 <div class="relative z-0 mb-6 w-full group">
@@ -50,7 +50,7 @@
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none   focus:outline-none focus:ring-0 focus:border-teal-600 peer"
                         placeholder=" " required />
                     <label for="floating_email"
-                        class="absolute text-sm text-gray-800  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                        class="absolute text-sm text-gray-800 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-focus:peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
                         address</label>
                 </div>
                 <div class="relative z-0 mb-6 w-full group">
@@ -58,14 +58,14 @@
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none   focus:outline-none focus:ring-0 focus:border-teal-600 peer"
                         placeholder=" " required />
                     <label for="floating_password"
-                        class="absolute text-sm text-gray-800  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+                        class="absolute text-sm text-gray-800 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-focus:peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
                 </div>
                 <div class="relative z-0 mb-6 w-full group">
                     <input type="password" name="repeat_password" id="confirm-password"
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none   focus:outline-none focus:ring-0 focus:border-teal-600 peer"
                         placeholder=" " required />
                     <label for="floating_repeat_password"
-                        class="absolute text-sm text-gray-800  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm
+                        class="absolute text-sm text-gray-800 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-focus:peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm
                         password</label>
                 </div>
                 <!-- <div class="relative z-0 mb-6 w-full group">
@@ -78,7 +78,7 @@
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none   focus:outline-none focus:ring-0 focus:border-teal-600 peer"
                             placeholder=" " required />
                         <label for="floating_first_name"
-                            class="absolute text-sm text-gray-800  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
+                            class="absolute text-sm text-gray-800 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-focus:peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First
                             name</label>
                     </div>
                     <div class="relative z-0 mb-6 w-full group">
@@ -86,7 +86,7 @@
                             class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-400 appearance-none   focus:outline-none focus:ring-0 focus:border-teal-600 peer"
                             placeholder=" " required />
                         <label for="floating_last_name"
-                            class="absolute text-sm text-gray-800  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last
+                            class="absolute text-sm text-gray-800 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-teal-600 peer-focus:dark:text-teal-500 peer-focus:peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last
                             name</label>
                     </div>
                 </div>
@@ -102,24 +102,26 @@
                     <div class="flex mt-6 mb-6">
                         <div class="flex items-center h-5">
                             <input id="terms" aria-describedby="terms" type="checkbox"
-                                class="w-4 h-4 bg-gray-50 rounded border border-slate-900 focus:ring-3 focus:ring-teal-300 "
+                                class="w-4 h-4 bg-gray-50 rounded border border-slate-900 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700  dark:focus:ring-teal-600 dark:ring-offset-gray-800"
                                 required>
                         </div>
                         <div class=" ml-3 text-sm">
-                            <label for="terms" class="font-medium text-gray-900 ">I agree with the <a href="#"
-                                    class="text-teal-600 hover:underline ">terms and conditions</a></label>
+                            <label for="terms" class="font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#"
+                                    class="text-teal-600 hover:underline dark:text-teal-500">terms and conditions</a></label>
                         </div>
                     </div>
-                    <div style="height:0px;"></div>
+                    <!-- <div style="height:0px;"></div> -->
                     <!-- <br> -->
                 </div>
                 <button type="button" id="submit-button"
-                    class="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center ">Register
+                    class="text-white bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:ring-teal-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Register
                     account</button>
             </form>
         </div>
     </main>
 
+    <div class="bg-slate-100 dark:bg-zinc-800" style="height: 50px;"></div>
+    
     <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
         <div class="flex justify-between content-between">
             <div>
