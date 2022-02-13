@@ -12,7 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
+    <style>
+        .max-h-0 {
+            max-height: 0;
+        }
+    </style>
     <title>Hackathon</title>
 </head>
 
@@ -29,59 +36,199 @@
                 <!-- <li><button>Sign up</button></li> -->
             </ul>
         </div>
-
-        <!-- <div class="flex text-xl justify-end">
-            <ul>
-                <li></li>
-            </ul>
-            <p><button>Login</button> / <button>Sign up</button></p>
-        </div> -->
     </nav>
-    <main class="mx-auto px-40 py-5">
-        <div id="accordion-collapse" data-accordion="collapse">
-            <h2 id="accordion-collapse-heading-1">
-                <button type="button" class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium text-left border border-gray-200 dark:border-gray-700 border-b-0 text-gray-900 dark:text-white bg-gray-100 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-t-xl" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
-                    <span>What is Flowbite?</span>
-                    <svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </h2>
-            <div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
-                <div class="p-5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900 border-b-0">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-                </div>
-            </div>
-            <h2 id="accordion-collapse-heading-2">
-                <button type="button" class="flex items-center focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 justify-between p-5 w-full font-medium border border-gray-200 dark:border-gray-700 border-b-0 text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-                    <span>Is there a Figma file available?</span>
-                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </h2>
-            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                <div class="p-5 border border-gray-200 dark:border-gray-700 border-b-0">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-                    <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-                </div>
-            </div>
-            <h2 id="accordion-collapse-heading-3">
-                <button type="button" class="flex items-center border focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border-gray-200 dark:border-gray-700 justify-between p-5 w-full font-medium text-left text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
-                    <span>What are the differences between Flowbite and Tailwind UI?</span>
-                    <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </h2>
-            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-                <div class="p-5 border border-gray-200 dark:border-gray-700 border-t-0">
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-                    <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-                    <ul class="list-disc pl-5 dark:text-gray-400 text-gray-500">
-                    <li><a href="https://flowbite.com/pro/" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-                    <li><a href="https://tailwindui.com/" rel="nofollow" target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+
+    <main class="mx-auto px-10 py-5">
+        <div class="flex justify-center py-10">
+            <div class="mr-8">
+                <div class="bg-white max-w-xl mx-auto border border-gray-200" x-data="{selected:1}">
+                    <ul class="shadow-box">
+                        <!-- First -->
+                        <li class="relative border-b border-gray-200">
+                            <div class="flex">
+                                <div class="">
+                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                                        <div class="flex items-center justify-between">
+                                            <span>
+                                                The Great Rann of Kutch</span>
+                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                        </div>
+                                    </button>
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                        <div class="p-6">
+                                            <p>When one thinks of Rann of Kutch, the first thing that comes to the mind is the majestic, barren and white marsh-lands and delicate, pink flamingos. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="flex pt-6">
+                                    <div class="flex justify-center items-center h-5">
+                                        <input id="terms" aria-describedby="terms" type="checkbox"
+                                            class="w-4 h-4 bg-gray-50 rounded border border-slate-900 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700  dark:focus:ring-teal-600 dark:ring-offset-gray-800"
+                                            required>
+                                    </div>
+                                    <div class="ml-3 text-sm"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Second -->
+                        <li class="relative border-b border-gray-200">
+                            <div class="flex">
+                                <div>
+                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
+                                        <div class="flex items-center justify-between">
+                                            <span>
+                                                The Mandvi Beach</span>
+                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                        </div>
+                                    </button>
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                        <div class="p-6">
+                                            <p>The Mandvi beach is one of the most serene beaches on the Northwestern shore. Its the perfect destination to come and relax with family and friends during winter mornings.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="flex pt-6">
+                                    <div class="flex justify-center items-center h-5">
+                                        <input id="terms" aria-describedby="terms" type="checkbox"
+                                            class="w-4 h-4 bg-gray-50 rounded border border-slate-900 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700  dark:focus:ring-teal-600 dark:ring-offset-gray-800"
+                                            required>
+                                    </div>
+                                    <div class="ml-3 text-sm"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Third -->
+                        <li class="relative border-b border-gray-200">
+                            <div class="flex">
+                                <div>
+                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                                        <div class="flex items-center justify-between">
+                                            <span>
+                                                The Kutch Museum</span>
+                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                        </div>
+                                    </button>
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                        <div class="p-6">
+                                            <p>The oldest museum of Gujarat, the Kutch Museum boasts of its collection of the extinct Kutchi Script and ancient coins.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="flex pt-7">
+                                    <div class="flex justify-center items-center h-5">
+                                        <input id="terms" aria-describedby="terms" type="checkbox"
+                                            class="w-4 h-4 bg-gray-50 rounded border border-slate-900 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700  dark:focus:ring-teal-600 dark:ring-offset-gray-800"
+                                            required>
+                                    </div>
+                                    <div class="ml-3 text-sm"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Fourth -->
+                        <li class="relative border-b border-gray-200">
+                            <div class="flex">
+                                <div>
+                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+                                        <div class="flex items-center justify-between">
+                                            <span>
+                                                Aaina Mahal (Hall of Mirrors)</span>
+                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                        </div>
+                                    </button>
+                        
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                        <div class="p-6">
+                                            <p>The Aaina Mahal palace, or 'Hall of Mirrors' was built during the flamboyant rule of Lakhpatji in the middle of the 18th century and is very beautiful.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Checkbox -->
+                                <div class="flex pt-7">
+                                    <div class="flex justify-center items-center h-5">
+                                        <input id="terms" aria-describedby="terms" type="checkbox"
+                                            class="w-4 h-4 bg-gray-50 rounded border border-slate-900 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700  dark:focus:ring-teal-600 dark:ring-offset-gray-800"
+                                            required>
+                                    </div>
+                                    <div class="ml-3 text-sm"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
-          </div>
+        </div>
     </main>
+
+    <main class="mx-auto px-10 my-5">
+        <div class="flex justify-start">
+            <a href="#">
+                <button
+                    class="flex hover:bg-zinc-800 hover:text-slate-200 bg-teal-500 rounded-full w-auto h-14 pl-5 pr-5 items-center text-lg font-semibold">
+                    Book your Guide
+                    <svg class=" ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd">
+                        </path>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <main id="allocation">
+
+    </main>
+
+    <div class="bg-slate-100 dark:bg-zinc-800" style="height: 100px;"></div>
+
+    <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
+        <div class="flex justify-between content-between">
+            <div>
+                <p class="my-2 sm:font-bold">CONTACT US</p>
+                <p class="my-2">9999999999</p>
+                <p class="my-2">abcd@gmail.com</p>
+            </div>
+            <div>
+                <p class="my-2">Code Odyssey</p>
+                <p class="my-2">Copyright &copy; 2022</p>
+                <p class="my-2">By RADS</p>
+            </div>
+            <div class="flex flex-row gap-4">
+                <!-- <i class="fa-brands fa-instagram">Instagram</i> -->
+                <button>
+                    <svg class="h-8 text-zinc-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                    </svg>
+                </button>
+                <button>
+                    <svg class="h-8 text-zinc-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg>
+                </button>
+                <button>
+                    <svg class="h-8 text-zinc-300" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
