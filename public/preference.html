@@ -38,25 +38,36 @@
         </div>
     </nav>
 
-    <main class="mx-auto px-10 py-5">
+    <main class="mx-auto px-10 py-5 text-lg">
         <div class="flex justify-center py-10">
-            <div class="mr-8">
+            <div class="mr-8 shadow-2xl">
                 <div class="bg-white max-w-xl mx-auto border border-gray-200" x-data="{selected:1}">
                     <ul class="shadow-box">
                         <!-- First -->
                         <li class="relative border-b border-gray-200">
                             <div class="flex">
                                 <div class="">
-                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                                    <button type="button" class="w-full px-8 py-6 text-left"
+                                        @click="selected !== 1 ? selected = 1 : selected = null">
                                         <div class="flex items-center justify-between">
                                             <span>
                                                 The Great Rann of Kutch</span>
-                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                            <span class="ico-plus"><svg data-accordion-icon=""
+                                                    class="w-6 h-6 shrink-0 rotate-180" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg></span>
                                         </div>
                                     </button>
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                                        style="display:none" x-ref="container1"
+                                        x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                                         <div class="p-6">
-                                            <p>When one thinks of Rann of Kutch, the first thing that comes to the mind is the majestic, barren and white marsh-lands and delicate, pink flamingos. </p>
+                                            <p>When one thinks of Rann of Kutch, the first thing that comes to the mind
+                                                is the majestic, barren and white marsh-lands and delicate, pink
+                                                flamingos. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -76,16 +87,27 @@
                         <li class="relative border-b border-gray-200">
                             <div class="flex">
                                 <div>
-                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
+                                    <button type="button" class="w-full px-8 py-6 text-left"
+                                        @click="selected !== 2 ? selected = 2 : selected = null">
                                         <div class="flex items-center justify-between">
                                             <span>
                                                 The Mandvi Beach</span>
-                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                            <span class="ico-plus"><svg data-accordion-icon=""
+                                                    class="w-6 h-6 shrink-0 rotate-180" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg></span>
                                         </div>
                                     </button>
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
+                                        x-ref="container1"
+                                        x-bind:style="selected == 2 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                                         <div class="p-6">
-                                            <p>The Mandvi beach is one of the most serene beaches on the Northwestern shore. Its the perfect destination to come and relax with family and friends during winter mornings.</p>
+                                            <p>The Mandvi beach is one of the most serene beaches on the Northwestern
+                                                shore. Its the perfect destination to come and relax with family and
+                                                friends during winter mornings.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -105,16 +127,26 @@
                         <li class="relative border-b border-gray-200">
                             <div class="flex">
                                 <div>
-                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                                    <button type="button" class="w-full px-8 py-6 text-left"
+                                        @click="selected !== 3 ? selected = 3 : selected = null">
                                         <div class="flex items-center justify-between">
                                             <span>
                                                 The Kutch Museum</span>
-                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                            <span class="ico-plus"><svg data-accordion-icon=""
+                                                    class="w-6 h-6 shrink-0 rotate-180" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg></span>
                                         </div>
                                     </button>
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
+                                        x-ref="container1"
+                                        x-bind:style="selected == 3 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                                         <div class="p-6">
-                                            <p>The oldest museum of Gujarat, the Kutch Museum boasts of its collection of the extinct Kutchi Script and ancient coins.</p>
+                                            <p>The oldest museum of Gujarat, the Kutch Museum boasts of its collection
+                                                of the extinct Kutchi Script and ancient coins.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -134,17 +166,28 @@
                         <li class="relative border-b border-gray-200">
                             <div class="flex">
                                 <div>
-                                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
+                                    <button type="button" class="w-full px-8 py-6 text-left"
+                                        @click="selected !== 4 ? selected = 4 : selected = null">
                                         <div class="flex items-center justify-between">
                                             <span>
                                                 Aaina Mahal (Hall of Mirrors)</span>
-                                            <span class="ico-plus"><svg data-accordion-icon="" class="w-6 h-6 shrink-0 rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></span>
+                                            <span class="ico-plus"><svg data-accordion-icon=""
+                                                    class="w-6 h-6 shrink-0 rotate-180" fill="currentColor"
+                                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd"
+                                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg></span>
                                         </div>
                                     </button>
-                        
-                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+
+                                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style=""
+                                        x-ref="container1"
+                                        x-bind:style="selected == 4 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
                                         <div class="p-6">
-                                            <p>The Aaina Mahal palace, or 'Hall of Mirrors' was built during the flamboyant rule of Lakhpatji in the middle of the 18th century and is very beautiful.</p>
+                                            <p>The Aaina Mahal palace, or 'Hall of Mirrors' was built during the
+                                                flamboyant rule of Lakhpatji in the middle of the 18th century and is
+                                                very beautiful.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -166,11 +209,12 @@
         </div>
     </main>
 
-    <main class="mx-auto px-10 my-5">
-        <div class="flex justify-start">
-            <a href="#">
+    <main class="mx-auto px-10">
+        <div class="flex justify-center">
+            <a href="#" class="pb-10">
                 <button
-                    class="flex hover:bg-zinc-800 hover:text-slate-200 bg-teal-500 rounded-full w-auto h-14 pl-5 pr-5 items-center text-lg font-semibold" id = "book">
+                    class="flex hover:bg-zinc-800 hover:text-slate-200 bg-teal-500 rounded-full w-auto h-14 pl-5 pr-5 items-center text-lg font-semibold"
+                    id="book">
                     Book your Guide
                     <svg class=" ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -184,15 +228,21 @@
         </div>
     </main>
 
-    <main id="allocation" class="mx-auto px-10 my-5" style = "display: none;">
-        <div class="text-slate-100 bg-zinc-500 font-normal mx-auto px-10 py-7">
-            <p id = "name" class="py-2"></p>
-            <p id = "contact" class="py-2"></p>
-            <p id = "description" class="py-2"></p>
+    <main id="allocation" class="px-10 py-10 mt-5 mx-auto bg-zinc-600 " style="display: block;">
+        <div class="text-slate-100 font-normal px-7 py-7 text-lg">
+            <p id="name" class="py-1">Name: Purvi Patel</p>
+            <p id="contact" class="py-1">Contact no.: 2315752</p>
+            <p class="py-1">Description: </p>
+            <p id="description" class="py-1">I was born in Gujarat and have spent my early stages of life
+                exploring my birthplace. While I love indulging visitors on food & architectural walks, I also
+                discuss
+                the cultural, political and of course, social aspects of my often misunderstood but fascinating
+                home.
+            </p>
         </div>
     </main>
 
-    <div class="bg-white" style="height: 100px;"></div>
+    <!-- <div class="bg-white" style="height: 100px;"></div> -->
 
     <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
         <div class="flex justify-between content-between">
@@ -237,5 +287,5 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="../js/auth.js"></script>
 <script src="../js/guideAlloc.js"></script>
-</html>
 
+</html>
