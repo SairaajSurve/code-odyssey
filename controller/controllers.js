@@ -204,13 +204,6 @@ const deleteUser = async (req, res) => {
     }
 }
 
-const getCity = async (req, res) => {
-    await mongoClient.connect()
-    const db = mongoClient.db("RADS");
-    const result = await db.collection("city").find({}).toArray();
-    mongoClient.close();
-    return res.status(200).json({ result })
-}
 const getGuide = async (req, res) => {
     await mongoClient.connect()
     const db = mongoClient.db("RADS");
@@ -224,7 +217,7 @@ const getGuide = async (req, res) => {
             description: result.description,
             rating: result.rating
         }
-        return status(200).json({ result })
+        return res.status(200).json({ guide })
     } else {
         return res.status(401).json({ msg: "Guide not found" })
     }
@@ -240,5 +233,4 @@ module.exports = {
     updateUser,
     deleteUser,
     getGuide,
-    getCity
 }

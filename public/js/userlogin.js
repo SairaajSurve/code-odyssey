@@ -9,14 +9,14 @@ document.querySelector("#login-button").addEventListener('click', async () => {
     })
 
     if(res.status == 200){
-        sessionStorage.setItem('token', res.data.token);
-        sessionStorage.setItem('fname', res.data.fname);
-        sessionStorage.setItem('lname', res.data.lname);
-        sessionStorage.setItem('email', res.data.email);
+        localStorage.setItem('token', res.data.token);
+        localStorage.setItem('fname', res.data.fname);
+        localStorage.setItem('lname', res.data.lname);
+        localStorage.setItem('email', res.data.email);
         window.alert("Login Succesful");
         window.location.href = "http://localhost:3001/"
     }else{
-        sessionStorage.clear();
+        localStorage.clear();
         window.alert("Login Failed");
         window.location.reload();
     }

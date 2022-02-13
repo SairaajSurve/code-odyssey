@@ -28,7 +28,7 @@
         class="bg-teal-600 hover:bg-slate-100 ease-in-out duration-700 hover:text-black md:flex justify-between content-around text-slate-100 px-7 py-2 md:px-14 md:py-5">
         <div class="text-xl md:text-3xl font-bold"> RADS </div>
         <div class="text-md md:text-xl md:px-10">
-            <ul class="md:flex list-none gap-8">
+            <ul class="md:flex list-none gap-8" id="nav-list">
                 <li class=""><a href="#">Home</a></li>
                 <li class=""><a href="main.html">Places to Visit</a></li>
                 <li class=""><button><a href="guidelogin.html">Login</a></button> / <button><a
@@ -170,7 +170,7 @@
         <div class="flex justify-start">
             <a href="#">
                 <button
-                    class="flex hover:bg-zinc-800 hover:text-slate-200 bg-teal-500 rounded-full w-auto h-14 pl-5 pr-5 items-center text-lg font-semibold">
+                    class="flex hover:bg-zinc-800 hover:text-slate-200 bg-teal-500 rounded-full w-auto h-14 pl-5 pr-5 items-center text-lg font-semibold" id = "book">
                     Book your Guide
                     <svg class=" ml-2 w-8 h-10" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -184,11 +184,15 @@
         </div>
     </main>
 
-    <main id="allocation">
-
+    <main id="allocation" style = "display: none;">
+        <div>
+            <p id = "name"></p>
+            <p id = "contact"></p>
+            <p id = "description"></p>
+        </div>
     </main>
 
-    <div class="bg-slate-100 dark:bg-zinc-800" style="height: 100px;"></div>
+    <div class="bg-white" style="height: 100px;"></div>
 
     <footer class="bg-zinc-800 text-zinc-300 text-xs sm:text-sm px-5 py-3 md:px-20 md:py-10">
         <div class="flex justify-between content-between">
@@ -230,5 +234,8 @@
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/guideAlloc.js"></script>
 </html>
 
