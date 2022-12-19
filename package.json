@@ -18,13 +18,13 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SairaajSurve/code-odyssey.git"
+    "url": "git+https://github.com/Devang-Shah-49/code-odyssey.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/SairaajSurve/code-odyssey/issues"
+    "url": "https://github.com/Devang-Shah-49/code-odyssey/issues"
   },
-  "homepage": "https://github.com/SairaajSurve/code-odyssey#readme",
+  "homepage": "https://github.com/Devang-Shah-49/code-odyssey#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
