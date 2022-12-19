@@ -1,5 +1,6 @@
-# Code Odessey
+<p align='center'><img src='https://user-images.githubusercontent.com/80088008/208483596-64e26f9a-7fdd-4e24-a717-e421f1fc5a45.png' width="150" ></p>
 
+# Code Odessey
 # Roots of India
 Explore the hidden gems in rural India
 
@@ -32,7 +33,6 @@ Our responsive website Roots of India, which:
 
 ## Prerequisites
 - Install Node JS - Refer to https://nodejs.org/en/ to install nodejs
-- Install Live Server (Visual Studio Code Extension)
 
 ## Cloning the repository locally
 - Clone the project on localhost
@@ -66,11 +66,15 @@ On your Cluster home page, select CONNECT > Connect your application.
 3. Paste this string as the value of mongoURI inside `.env` of this project.
 
 Replace the `<password>` section of the string with your Database Access password. Your server should now successfuly connect to MongoDB!
-Once you run the server, you get a log `Connected at 3001` on the console.
+
 ## Running the website locally
-- Move over to the public folder
-- Open `index.html` file and Open it with live server
-- Hurray! The web would now be live on `http://127.0.0.1:5500/code-odyssey/public/index.html`
+- Execute the command 
+```bash
+npm run dev
+```
+- Nodemon will automatically run node server.js for you
+- If everything executed properly, you will get a log `Connected at 3001` on the console.
+- Hurray! The web would now be up and running on `http://localhost:3001/`
 
 # Screenshots of the website
 ![home](https://user-images.githubusercontent.com/80088008/206693635-cc6c1ef1-f545-4917-a331-9940a45369f5.png)
